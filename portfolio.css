@@ -46,6 +46,20 @@ body{
     font-family: "Road Rage", "DM Sans", sans-serif;
     font-style: normal;
 }
+@font-face{
+    font-family: "OPTIBankGothic";
+    src: url("source/fonts/opti-bank-gothic/OPTIBankGothic-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: "OPTIBankGothic";
+    src: url("source/fonts/opti-bank-gothic/OPTIBankGothic-Medium.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 .opti{
     font-family: "OPTIBankGothic", "DM Sans", sans-serif;
     font-style: normal;
