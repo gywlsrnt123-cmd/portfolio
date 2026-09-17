@@ -1031,7 +1031,7 @@ header>.version>img{
 }
 .card-portfolio{
     position: absolute;
-    top: 150px;
+    top: 110px;
     left: 110px;
     z-index: 3;
     width: 680px;
