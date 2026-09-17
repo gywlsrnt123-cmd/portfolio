@@ -251,7 +251,26 @@
                 </p>
                 <a class="view titan" href="monster-project.html">view project</a>
             </article>
-            <p class="titan">GRAPHIC PORTFOLIO</p>
+            <article class="design">
+                <div class="design-graphic">
+                    <img class="dgraphic dgraphic-1" src="source/main/graphic/graphic24.png" alt="">
+                    <img class="dgraphic dgraphic-2" src="source/main/graphic/graphic5.png" alt="">
+                    <img class="darrow darrow-1" src="source/main/arrow3.png" alt="">
+                </div>
+                <h2 class="titan">
+                    <span>DESIGN</span>
+                    <span>PORTFOLIO</span>
+                </h2>
+                <div class="card-portfolio" aria-label="디자인 포트폴리오 카드">
+                    <a class="portfolio-card graphic-card" href="source/main/Graphic_portfolio.pdf" target="_blank" rel="noopener" aria-label="그래픽 포트폴리오 PDF 새 탭에서 열기">
+                        <img src="source/main/graphic_card.png" alt="그래픽 포트폴리오">
+                    </a>
+                    <a class="portfolio-card project-card is-active" href="source/main/Planning_portfolio.pdf" target="_blank" rel="noopener" aria-label="기획 디자인 포트폴리오 PDF 새 탭에서 열기">
+                        <img src="source/main/project_card.png" alt="기획 디자인 포트폴리오">
+                    </a>
+                </div>
+                <span class="card-view titan">CLICK TO VIEW</span>
+            </article>
         </section>
     </main>
     <!--main end-->
@@ -424,6 +443,38 @@
         window.addEventListener("load", alignSkillPanel);
         document.fonts.ready.then(alignSkillPanel);
         window.addEventListener("resize", alignSkillPanel);
+
+        const portfolioCards = document.querySelectorAll(".portfolio-card");
+        const designArticle = document.querySelector("#works > .design");
+
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            designArticle.classList.add("is-revealed");
+        } else {
+            const designObserver = new IntersectionObserver((entries) => {
+                designArticle.classList.toggle("is-revealed", entries[0].isIntersecting);
+            }, {
+                threshold: 0.12,
+                rootMargin: "0px 0px -15% 0px"
+            });
+
+            designObserver.observe(designArticle);
+        }
+
+        portfolioCards.forEach((card) => {
+            card.addEventListener("click", (event) => {
+                const wasActive = card.classList.contains("is-active");
+
+                if (!wasActive) {
+                    event.preventDefault();
+                }
+
+                portfolioCards.forEach((item) => {
+                    const isActive = item === card;
+                    item.classList.toggle("is-active", isActive);
+                });
+            });
+        });
+
     </script>
     <script>
         document.querySelectorAll('header a[href^="#"]').forEach((link) => {

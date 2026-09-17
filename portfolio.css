@@ -775,7 +775,7 @@ header>.version>img{
 #works{
     position: relative;
     overflow: hidden;
-    height: 3574px;
+    height: 3820px;
     padding: 120px 90px;
     background-image: url("source/main/background1-4.png");
     background-repeat: no-repeat;
@@ -804,23 +804,23 @@ header>.version>img{
 .wgraphic-3{
     width: 440px;
     right: -7.41%;
-    top: 31.53%;
+    top: 34.53%;
     transform: rotate(15deg);
 }
 .wgraphic-4{
     width: 53px;
     right: 9.13%;
-    top: 44.66%;
+    top: 45.66%;
 }
 .wgraphic-5{
     width: 94px;
     left: 42.1%;
-    top: 53%;
+    top: 49%;
 }
 .wgraphic-6{
     width: 340px;
     left: 1517.37px;
-    bottom: 925px;
+    bottom: 1140px;
     transform: rotate(-17.26deg);
     z-index: 7;
 }
@@ -832,7 +832,7 @@ header>.version>img{
 .warrow-2{
     width: 131px;
     left: 34.34%;
-    bottom: 29.85%;
+    bottom: 34.85%;
 }
 #works h2{
     position: relative;
@@ -921,8 +921,8 @@ header>.version>img{
 #works>.monster>.Mtool{
     width: 555px;
     position: absolute;
-    right: 0;
-    bottom: 110px;
+    right: 25px;
+    top: 960px;
 }
 #works>.monster>span{
     position: absolute;
@@ -973,6 +973,127 @@ header>.version>img{
     font-size: 200px;
     text-align: center;
     color: #DCFF00;
+}
+.design-graphic{
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+.dgraphic{
+    position: absolute;
+}
+.dgraphic-1{
+    right: 317px;
+    bottom: 647px;
+    width: 55px;
+}
+.dgraphic-2{
+    top: 730px;
+    left: 88.5%;
+    width: 110px;
+}
+.darrow-1{
+    position: absolute;
+    top: 320px;
+    left: 53%;
+    width: 210px;
+    transform: rotate(-5deg);
+}
+#works>.design{
+    z-index: 3;
+    transform: translateY(1180px);
+}
+#works>.design>h2{
+    position: absolute;
+    top: 480px;
+    right: 10px;
+    z-index: 2;
+    width: 1120px;
+    height: 350px;
+    color: transparent;
+    font-size: 180px;
+    line-height: 1;
+    -webkit-text-stroke: 2px #DCFF00;
+}
+#works>.design>h2>span{
+    display: block;
+    position: absolute;
+    right: 10px;
+    white-space: nowrap;
+}
+#works>.design>h2>span:first-child{
+    top: 0;
+}
+#works>.design>h2>span:last-child{
+    top: 155px;
+    right: 140px;
+}
+.card-portfolio{
+    position: absolute;
+    top: 150px;
+    left: 110px;
+    z-index: 3;
+    width: 680px;
+    height: 600px;
+}
+.card-view{
+    position: absolute;
+    top: 618px;
+    left: 840px;
+    z-index: 4;
+    color: #FFFFFF;
+    font-size: 22px;
+    letter-spacing: 0;
+    white-space: nowrap;
+    text-shadow: 0px 4px 4px rgba(38, 42, 151, 0.3);
+
+}
+.portfolio-card{
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 360px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transform: rotate(var(--card-angle));
+    transform-origin: 50% 85%;
+    transition: left 0.7s cubic-bezier(.2,.8,.2,1), transform 0.7s cubic-bezier(.2,.8,.2,1);
+}
+.portfolio-card>img{
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0px 10px 4px rgba(27, 31, 126, 0.2));
+}
+.graphic-card{
+    --card-angle: -9deg;
+    z-index: 1;
+}
+.project-card{
+    --card-angle: 13deg;
+    left: 270px;
+    z-index: 2;
+}
+.design:not(.is-revealed) .graphic-card,
+.design:not(.is-revealed) .project-card{
+    left: 135px;
+    transform: translateY(90px) rotate(0deg) scale(0.96);
+}
+.portfolio-card.is-active{
+    z-index: 5;
+    transform: translateY(-55px) rotate(var(--card-angle));
+}
+.portfolio-card:focus-visible{
+    outline: 4px solid #FFFFFF;
+    outline-offset: 7px;
+}
+@media (prefers-reduced-motion: reduce){
+    .portfolio-card{
+        transition: none;
+    }
 }
 
 /*main-contact style*/
