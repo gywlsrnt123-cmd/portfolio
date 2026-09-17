@@ -1040,14 +1040,13 @@ header>.version>img{
 .card-view{
     position: absolute;
     top: 618px;
-    left: 785px;
+    left: 45%;
     z-index: 4;
     color: #FFFFFF;
     font-size: 22px;
     letter-spacing: 0;
     white-space: nowrap;
     text-shadow: 0px 4px 4px rgba(38, 42, 151, 0.3);
-
 }
 .portfolio-card{
     position: absolute;
